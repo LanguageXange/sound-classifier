@@ -1,0 +1,124 @@
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(27, 27, 27);
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 15;
+}
+
+footer a {
+  color: lightblue;
+}
+footer a:hover {
+  color: lightgreen;
+}
+
+.content {
+  margin-top: 50px;
+  padding: 30px 45px;
+  max-width: 800px;
+}
+
+.instruction {
+  font-size: 1em;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border-bottom: 2px solid lightcyan;
+  margin-bottom: 50px;
+}
+.instruction > span {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  border-right: 4px solid white;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(151, 235, 148);
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(49, 216, 71);
+  color: #fff;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 24px;
+  color: #fff;
+  margin: 25px auto;
+  align-self: center;
+  padding: 0 20px;
+}
+
+.game {
+  border-radius: 10px;
+  border: 1px solid lightcyan;
+  position: relative;
+  width: 650px;
+  height: 250px;
+  margin: auto;
+  background-color: #d7f1f6;
+}
+
+#mario {
+  width: 50px;
+  height: 50px;
+  background: url(img/mario2.png);
+  background-size: 50px 50px;
+  position: absolute;
+  z-index: 3;
+  top: 0px;
+}
+
+#coin {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 100px;
+  background-image: url("img/coins2.png");
+  background-size: 20px 20px;
+  visibility: hidden;
+}
+
+#coin.start {
+  animation: shooo 1.65s infinite linear;
+  visibility: visible;
+}
+
+@keyframes shooo {
+  0% {
+    left: 630px;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    left: -5px;
+    opacity: 0;
+  }
+}
